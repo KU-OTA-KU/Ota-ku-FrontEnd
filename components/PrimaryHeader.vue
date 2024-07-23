@@ -6,7 +6,7 @@
           <v-toolbar-title style="max-width: 120px; min-width: 120px; margin-right: 20px" @click="navigateToHome"
                            class="cursor-pointer">
             <v-img class="ota-ku-ru-icon user-select-none"
-                   src="/ota-kashima/ota-ku-kashima.png"
+                   src="assets/ota-kashima/ota-ku-kashima.png"
                    width="100%"
                    alt="ota-ku watch anime in good quality"
             ></v-img>
@@ -42,7 +42,7 @@
                  @click="this.$router.push('openAnimeView?animeId=' + Math.floor(Math.random() * 1000))"></v-btn>
           <!--<v-btn density="comfortable" icon="mdi-magnify" variant="text" disabled></v-btn>-->
           <v-btn density="comfortable" icon="mdi-cog" variant="text" disabled></v-btn>
-          <v-btn density="comfortable" icon="mdi-theme-light-dark" variant="text" @click="changeTheme()" disabled></v-btn>
+          <!-- <v-btn density="comfortable" icon="mdi-theme-light-dark" variant="text" @click="changeTheme()"></v-btn> -->
           <v-btn density="comfortable" icon="mdi-account" variant="text" disabled></v-btn>
         </v-col>
       </v-container>

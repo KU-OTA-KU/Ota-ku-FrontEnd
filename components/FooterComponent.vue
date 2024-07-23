@@ -3,7 +3,7 @@
     <v-footer color="" theme="customDark" class="pa-0 pt-5 pb-10" elevation="8">
       <v-container class="most-anime-container"
                    style="max-width: var(--ota-ku-max-width); padding: 0 10px; align-items: center;">
-        <div class="mb-1 d-flex ga-2  flex-sm-column flex-md-row flex-column ">
+        <div class="mb-1 d-flex ga-2  flex-sm-column flex-md-row flex-column">
           <div class="">
             <span style="font-family: 'Inter', sans-serif; font-size: 0.9em">Весь контент на сайте предназначен исключительно для личного ознакомления. Мы используем
                               материалы из
@@ -61,6 +61,3 @@ export default defineComponent({
   name: "FooterComponent",
 });
 </script>
-
-<style lang="sass" scoped>
-</style>

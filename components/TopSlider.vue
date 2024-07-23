@@ -13,7 +13,8 @@
         hide-delimiter-background
         cycle
         model-value="1"
-        direction="vertical"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
         show-arrows="hover"
         style="border-radius: 20px; height: var(--top-slider-height);"
     >

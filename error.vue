@@ -29,7 +29,7 @@
         </v-card-actions>
       </v-card>
       <div class="image-container-404">
-        <v-img width="400px" src="/person/darkness_1.png" lazy-src="/person/darkness_1.png"
+        <v-img width="400px" src="assets/person/darkness_1.png" lazy-src="assets/person/darkness_1.png"
                alt="Коносуба Даркнесс"></v-img>
       </div>
     </v-container>

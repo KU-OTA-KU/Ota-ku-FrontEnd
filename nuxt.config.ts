@@ -32,5 +32,9 @@ export default defineNuxtConfig({
 
     build: {
         transpile: ['vuetify'],
-    }
+    },
+
+    router: {
+      prefetchLinks: false
+    },
 })
