@@ -1,0 +1,8 @@
+{
+  "name": "Ota-ku",
+  "integrations": {
+    "capacitor": true
+  },
+  "type": "vue",
+  "css": false
+}

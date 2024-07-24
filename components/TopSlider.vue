@@ -59,7 +59,7 @@
 <script lang="ts">
 import {defineComponent, ref} from "vue";
 import axios from "axios";
-import {Storage} from "@capacitor/storage";
+import { Preferences } from '@capacitor/preferences';
 import {cleanDescription} from "~/typeScript/cleanDescription";
 import {openAnime} from "~/typeScript/goTo";
 
@@ -82,8 +82,8 @@ export default defineComponent({
   methods: {
     async loadData() {
       try {
-        const {value} = await Storage.get({key: 'topSliderAnimeList'});
-        const {value: expirationDateString} = await Storage.get({key: 'topSliderAnimeListExpirationDate'});
+        const {value} = await Preferences.get({key: 'topSliderAnimeList'});
+        const {value: expirationDateString} = await Preferences.get({key: 'topSliderAnimeListExpirationDate'});
 
         if (value && expirationDateString) {
           const expirationDate = parseInt(expirationDateString, 10);
@@ -131,7 +131,7 @@ export default defineComponent({
 
         const animeList = response.data.data.animes;
         this.topSliderAnimeList = animeList;
-        await Storage.set({
+        await Preferences.set({
           key: 'topSliderAnimeList',
           value: JSON.stringify(animeList),
         });
@@ -139,7 +139,7 @@ export default defineComponent({
         const expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + 2);
 
-        await Storage.set({
+        await Preferences.set({
           key: 'topSliderAnimeListExpirationDate',
           value: expirationDate.getTime().toString(),
         });

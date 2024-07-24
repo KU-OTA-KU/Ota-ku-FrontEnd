@@ -62,7 +62,7 @@
 <script lang="ts">
 import {defineComponent, ref} from "vue";
 import axios from "axios";
-import {Storage} from "@capacitor/storage";
+import { Preferences } from '@capacitor/preferences';
 import AnimeDialog from "@/components/others/AnimeDialog.vue";
 
 export default defineComponent({
@@ -81,8 +81,8 @@ export default defineComponent({
   methods: {
     async loadData() {
       try {
-        const {value} = await Storage.get({key: 'mostAnimeList'});
-        const {value: expirationDateString} = await Storage.get({key: 'mostAnimeListExpirationDate'});
+        const {value} = await Preferences.get({key: 'mostAnimeList'});
+        const {value: expirationDateString} = await Preferences.get({key: 'mostAnimeListExpirationDate'});
 
         if (value && expirationDateString) {
           const expirationDate = parseInt(expirationDateString, 10);
@@ -277,7 +277,7 @@ export default defineComponent({
         ];
 
         this.mostAnimeList = animeList;
-        await Storage.set({
+        await Preferences.set({
           key: 'mostAnimeList',
           value: JSON.stringify(animeList),
         });
@@ -285,7 +285,7 @@ export default defineComponent({
         const expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + 2);
 
-        await Storage.set({
+        await Preferences.set({
           key: 'mostAnimeListExpirationDate',
           value: expirationDate.getTime().toString(),
         });

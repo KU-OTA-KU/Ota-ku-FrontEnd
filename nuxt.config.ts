@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     plugins: ['~/plugins/nprogress.ts'],
-    modules: ["nuxt-gtag", 'vuetify-nuxt-module'],
+    modules: ["nuxt-gtag", 'vuetify-nuxt-module', "@nuxtjs/ionic"],
 
     gtag: {
         id: 'G-XKSYJXXKPB'
@@ -34,7 +34,10 @@ export default defineNuxtConfig({
         transpile: ['vuetify'],
     },
 
-    router: {
-      prefetchLinks: false
+    ionic: {
+      integrations: {
+        capacitor: true,
+      },
+      css: false
     },
 })

@@ -1,0 +1,5 @@
+{
+  "appId": "com.otaku.app",
+  "appName": "Ota-ku",
+  "webDir": ".output/public/"
+}
