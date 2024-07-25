@@ -1,8 +1,5 @@
 <template>
-  <v-card class="ota-anime-containers mt-4 mb-13" variant="text">
-    <v-card-title class="ota-anime-containers-v-title pa-0">Каталог релизов</v-card-title>
-    <v-card-subtitle class="ota-anime-containers-v-subtitle pa-0">Самые новые и свежие эпизоды в каталоге
-    </v-card-subtitle>
+  <v-card class="ota-anime-containers mt-2 mb-13" variant="text">
     <v-row no-gutters class="mt-2 flex-nowrap">
       <v-form @submit.prevent="submitForm" class="w-100">
         <v-text-field label="Что будем искать в мире аниме?" placeholder="например. Атака титанов" hide-details

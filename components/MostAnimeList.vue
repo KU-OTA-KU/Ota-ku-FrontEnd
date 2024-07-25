@@ -63,7 +63,7 @@
 import {defineComponent, ref} from "vue";
 import axios from "axios";
 import { Preferences } from '@capacitor/preferences';
-import AnimeDialog from "@/components/others/AnimeDialog.vue";
+import AnimeDialog from "~/components/AnimeDialog.vue";
 
 export default defineComponent({
   components: {

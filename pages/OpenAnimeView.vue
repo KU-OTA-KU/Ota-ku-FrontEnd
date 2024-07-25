@@ -121,7 +121,7 @@ import {cleanDescription} from "~/typeScript/cleanDescription";
 import {formatDate} from "~/typeScript/formatDate";
 import moment from 'moment-timezone';
 import {openAnime} from "~/typeScript/goTo";
-import Banner from "@/components/others/Banner.vue";
+import Banner from "~/components/Banner.vue";
 import OpenAnimeGallery from "@/components/OpenAnimeGallery.vue";
 import OpenAnimePlayer from "@/components/OpenAnimePlayer.vue";
 

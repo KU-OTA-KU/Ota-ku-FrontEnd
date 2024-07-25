@@ -28,10 +28,24 @@ export default defineNuxtConfig({
         '~/assets/root.scss',
         `~/assets/variables.scss`,
         'vuetify/lib/styles/main.sass',
+        '~/assets/nprogress.css',
     ],
 
     build: {
         transpile: ['vuetify'],
+        loaders: {
+          vue: {
+            transformAssetUrls: {
+              video: 'src',
+              source: 'src',
+              object: 'data',
+              img: 'src',
+              image: 'xlink:href'
+            }
+          }
+        },
+        extractCSS: true,
+        optimizeCSS: true
     },
 
     ionic: {

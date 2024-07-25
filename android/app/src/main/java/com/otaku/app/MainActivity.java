@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.otaku.app;
 
 import com.getcapacitor.BridgeActivity;
 

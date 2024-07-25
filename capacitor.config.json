@@ -1,5 +1,10 @@
 {
   "appId": "com.otaku.app",
   "appName": "Ota-ku",
-  "webDir": ".output/public/"
+  "webDir": ".output/public/",
+  "plugins": {
+    "StatusBar": {
+      "style": "dark"
+    }
+  }
 }

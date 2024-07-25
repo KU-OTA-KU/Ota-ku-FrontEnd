@@ -1,5 +1,5 @@
 <template>
-  <v-container class="d-flex pa-2"
+  <v-container class="d-flex pa-0 md-pa-2"
                style="max-width: var(--ota-ku-max-width);">
     <v-skeleton-loader
         v-if="topSliderAnimeList.length === 0"
