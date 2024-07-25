@@ -1,11 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
-
+    ssr: true,
     devtools: { enabled: true },
 
     plugins: ['~/plugins/nprogress.ts'],
-    modules: ["nuxt-gtag", 'vuetify-nuxt-module', "@nuxtjs/ionic"],
+    modules: [
+      "nuxt-gtag",
+      "@nuxtjs/ionic",
+      '@nuxtjs/tailwindcss',
+      '@nuxtjs/robots',
+      '@nuxt/image',
+    ],
 
     gtag: {
         id: 'G-XKSYJXXKPB'
@@ -26,24 +32,11 @@ export default defineNuxtConfig({
 
     css: [
         '~/assets/root.scss',
-        `~/assets/variables.scss`,
-        'vuetify/lib/styles/main.sass',
+        `~/assets/variables.css`,
         '~/assets/nprogress.css',
     ],
 
     build: {
-        transpile: ['vuetify'],
-        loaders: {
-          vue: {
-            transformAssetUrls: {
-              video: 'src',
-              source: 'src',
-              object: 'data',
-              img: 'src',
-              image: 'xlink:href'
-            }
-          }
-        },
         extractCSS: true,
         optimizeCSS: true
     },

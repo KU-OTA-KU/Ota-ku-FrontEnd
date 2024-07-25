@@ -1,0 +1,21 @@
+/* assets/styles.css */
+
+.button {
+  @apply w-full text-base text-center justify-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
+}
+
+.button-primary {
+  @apply bg-blue-500 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700;
+}
+
+.button-disabled {
+  @apply bg-gray-500 pointer-events-none;
+}
+
+.link {
+  @apply  text-center text-base font-sans font-semibold underline
+}
+
+.link-primary {
+  @apply text-white hover:text-blue-600 cursor-pointer
+}
