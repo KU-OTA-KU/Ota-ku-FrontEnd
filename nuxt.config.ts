@@ -47,4 +47,5 @@ export default defineNuxtConfig({
       },
       css: false
     },
+    
 })
