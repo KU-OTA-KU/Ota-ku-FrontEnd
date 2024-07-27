@@ -26,8 +26,6 @@
           </div>
         </div>
         <div>
-        </div>
-        <div>
           <button :disabled="isSubmitDisabled" type="submit" class="button button-primary"
             :class="{ 'button-disabled': isSubmitDisabled }">Продолжать</button>
         </div>

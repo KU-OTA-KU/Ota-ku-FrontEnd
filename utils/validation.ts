@@ -23,6 +23,16 @@ export function validateLogin(login: string, errors: ValidationErrors): void {
   }
 }
 
+export function validateOtpInput(otp: string, errors: ValidationErrors): void {
+  if (!otp) {
+    errors.otp = 'Это поле обязательно для заполнения';
+  } else {
+    delete errors.otp;
+  }
+}
+
+
+
 export function validatePassword(password: string, errors: ValidationErrors): void {
   if (!password) {
     errors.password = 'Это поле обязательно для заполнения';
