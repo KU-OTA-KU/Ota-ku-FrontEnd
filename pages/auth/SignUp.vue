@@ -40,7 +40,7 @@
         </div>
         <div>
           <div class="flex gap-3">
-            <div>
+            <div class="w-full">
               <div class="flex items-center justify-between">
                 <label for="password" class="block text-sm font-medium leading-5">Пароль</label>
               </div>
@@ -50,7 +50,7 @@
                 <p v-if="errors.password" class="text-red-500 text-xs mt-1">{{ errors.password }}</p>
               </div>
             </div>
-            <div>
+            <div class="w-full">
               <div class="flex items-center justify-between">
                 <label for="password-repeat" class="block text-sm font-medium leading-5">Повторите пароль</label>
               </div>

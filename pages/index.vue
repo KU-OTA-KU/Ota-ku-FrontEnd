@@ -1,5 +1,5 @@
 <template>
-  <mainHeader :active="1"/>
+  <mainHeader :active="0"/>
 </template>
 
 <script lang="ts">

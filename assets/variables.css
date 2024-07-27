@@ -3,7 +3,7 @@
 
 /* button */
 .button {
-  @apply w-full text-base text-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
+  @apply w-full text-sm font-sans text-center cursor-pointer rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
 }
 
 .button-primary {
@@ -24,7 +24,7 @@
 
 /* link */
 .link {
-  @apply text-center text-base font-sans font-semibold underline
+  @apply text-center text-sm font-sans font-semibold underline
 }
 
 .link-primary {
@@ -33,7 +33,7 @@
 
 /* input */
 .input {
-  @apply w-full text-base text-left justify-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
+  @apply w-full text-left justify-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm text-sm
 }
 
 .input-primary {
