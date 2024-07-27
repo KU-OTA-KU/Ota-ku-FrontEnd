@@ -46,72 +46,69 @@
   </div>
 </template>
 
-
 <script lang="ts">
 import { defineComponent, ref, computed, nextTick } from 'vue';
 
 export default defineComponent({
   name: "otpComponent",
-  setup() {
-    const otp = ref(['', '', '', '', '']);
-    const isSubmitDisabled = computed(() => otp.value.some(num => num === ''));
-
-    const submitForm = () => {
-      console.log('Form submitted:', { otp: otp.value });
+  data() {
+    return {
+      otp: ['', '', '', '', ''],
     };
-
-    const handleInput = (index: number, event: Event) => {
+  },
+  computed: {
+    isSubmitDisabled() {
+      return this.otp.some(num => num === '');
+    }
+  },
+  methods: {
+    submitForm() {
+      console.log('Form submitted:', { otp: this.otp });
+      this.$router.push("/auth/changePassword")
+    },
+    handleInput(index: number, event: Event) {
       const target = event.target as HTMLInputElement;
       const value = target.value;
 
       if (value) {
-        if (index < otp.value.length - 1) {
+        if (index < this.otp.length - 1) {
           nextTick(() => {
             const inputs = document.querySelectorAll('input[type=text]');
             (inputs[index + 1] as HTMLInputElement).focus();
           });
         }
       }
-    };
-
-    const handleKeyDown = (index: number, event: KeyboardEvent) => {
+    },
+    handleKeyDown(index: number, event: KeyboardEvent) {
       if (!/^[0-9]{1}$/.test(event.key) && !['Backspace', 'Delete', 'Tab'].includes(event.key) && !event.metaKey) {
         event.preventDefault();
       }
 
       if (event.key === 'Backspace' || event.key === 'Delete') {
-        if (index > 0) {
-          otp.value[index - 1] = '';
-          nextTick(() => {
-            const inputs = document.querySelectorAll('input[type=text]');
-            (inputs[index - 1] as HTMLInputElement).focus();
-          });
+        if (this.otp[index] === '') {
+          if (index > 0) {
+            nextTick(() => {
+              const inputs = document.querySelectorAll('input[type=text]');
+              (inputs[index - 1] as HTMLInputElement).focus();
+            });
+          }
+        } else {
+          this.otp[index] = '';
         }
       }
-    };
-
-    const handlePaste = (event: ClipboardEvent) => {
+    },
+    handlePaste(event: ClipboardEvent) {
       event.preventDefault();
       const text = event.clipboardData?.getData('text');
       if (/^\d{5}$/.test(text)) {
-        otp.value = text.split('');
+        this.otp = text.split('');
         nextTick(() => {
           (document.querySelector('button[type=submit]') as HTMLButtonElement).focus();
         });
       }
-    };
-
-    return {
-      otp,
-      isSubmitDisabled,
-      submitForm,
-      handleInput,
-      handleKeyDown,
-      handlePaste,
-    };
+    }
   }
 });
 </script>
-
 
 <style scoped></style>
