@@ -3,11 +3,19 @@
 
 /* button */
 .button {
-  @apply w-full text-base text-center justify-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
+  @apply w-full text-base text-center rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
 }
 
 .button-primary {
   @apply bg-blue-500 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-700;
+}
+
+.button-secondary {
+  @apply bg-opacity-5 text-sm bg-white shadow-none hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-700
+}
+
+.button-secondary.active {
+  @apply bg-blue-500
 }
 
 .button-disabled {
