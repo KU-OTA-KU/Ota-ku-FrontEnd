@@ -1,11 +1,3 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'WelcomeView',
-});
-</script>
-
 <template>
   <div class="w-full h-dvh overflow-hidden">
     <div class="scroller overflow-hidden rotate-12 fixed" data-direction="left" data-speed="slow" data-animated='true'>
@@ -128,12 +120,14 @@ export default defineComponent({
       </div>
     </div>
   </div>
-  <div class="absolute top-0 p-2">
-    <p class="text-sm text-gray-300">©2022-2024 OTA-KU Все права защищены.</p>
+  <div class="absolute top-0 pt-12 pl-3">
+    <p class="text-sm text-gray-300">©2022 - 2024 OTA-KU Все права защищены.</p>
+    <p class="text-sm text-gray-200">для людей старше 16 лет</p>
   </div>
   <div class="absolute bottom-0 w-full">
     <div class="w-full flex flex-col justify-center items-center">
-      <NuxtImg preload format="webp" src="/otaKu/ota-ku-kashima.png" class="w-1/2 md:w-56 lg:w-60 xl:w-72"  alt="Ota-ku Смотреть аниме в нашем платформе"/>
+      <NuxtImg preload format="webp" src="/otaKu/ota-ku-kashima.png" class="w-1/2 md:w-56 lg:w-60 xl:w-72"
+        alt="Ota-ku Смотреть аниме в нашем платформе" />
       <div class="mt-1 mb-4 text-center">
         <h1 class="text-4xl  md:text-5xl font-sans font-bold leading-none">Добро пожаловать</h1>
         <h2 class="text-xl lg:text-xl mt-2 leading-none">Здесь начинаются ваши<br> незабываемые приключения.</h2>
@@ -143,14 +137,39 @@ export default defineComponent({
         <span class="text-center text-blue-400 font-semibold font-sans text-sm">или</span>
         <NuxtLink class="link link-primary" to="/auth/signup">Создать акканут</NuxtLink>
       </div>
-      <div class="p-1">
-        <p class="text-sm text-center text-gray-300">Весь контент на сайте предназначен исключительно для личного
-          ознокомительного
-          просмотора.</p>
+      <div class="p-1 pb-12">
+        <p class="text-sm text-center text-gray-300">Весь материал на сайте представлен исключительно для домашнего
+          ознакомительного просмотра</p>
       </div>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, onMounted, onBeforeUnmount } from "vue";
+import { useNuxtApp } from '#app';
+
+export default defineComponent({
+  name: "welcomeView",
+
+  setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      await $statusBar.overlayHide();
+      await $navigationBar.overlayHide();
+    });
+
+    onBeforeUnmount(() => {
+      $statusBar.overlayShow();
+      $navigationBar.overlayShow();
+    });
+
+    return {};
+  }
+});
+</script>
+
 
 <style lang="scss" scoped>
 .scroller {
@@ -170,7 +189,7 @@ export default defineComponent({
     gap: 1dvw;
 
     .welcome-image {
-      width: 15dvw;
+      width: 17dvw;
       height: auto;
       aspect-ratio: 1 / 1.4;
       border-radius: 15px;
@@ -182,13 +201,12 @@ export default defineComponent({
 
     &,
     .scroller-container {
-      gap: 1vw;
-
+      gap: 1.5dvw;
     }
 
     .scroller-container {
       .welcome-image {
-        width: 17dvw;
+        width: 23dvw;
         border-radius: 10px;
       }
     }
@@ -198,28 +216,56 @@ export default defineComponent({
 
     &,
     .scroller-container {
-      gap: 1.5dvw;
+      gap: 2dvw;
 
     }
 
     .scroller-container {
       .welcome-image {
-        width: 25dvw;
+        width: 30dvw;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 590px) {
+
+    &,
+    .scroller-container {
+      gap: 3.5dvw;
+
+    }
+
+    .scroller-container {
+      .welcome-image {
+        width: 45dvw;
         border-radius: 8px;
       }
     }
   }
 
   @media (max-width: 425px) {
-
     &,
     .scroller-container {
-      gap: 3dvw;
+      gap: 3.5dvw;
     }
 
     .scroller-container {
       .welcome-image {
-        width: 37dvw;
+        width: 45dvw;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    &,
+    .scroller-container {
+      gap: 3.5dvw;
+    }
+
+    .scroller-container {
+      .welcome-image {
+        width: 52dvw;
       }
     }
   }

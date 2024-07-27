@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     ssr: true,
     devtools: { enabled: true },
 
-    plugins: ['~/plugins/nprogress.ts'],
+    plugins: ['~/plugins/nprogress.ts', '~/plugins/statusBar.ts', '~/plugins/navigationBar.ts'],
     modules: [
       "nuxt-gtag",
       "@nuxtjs/ionic",

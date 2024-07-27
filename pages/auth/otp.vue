@@ -19,15 +19,15 @@
       <form @submit.prevent="submitForm" ref="otpForm" class="space-y-5">
         <div class="flex items-center justify-center gap-3">
           <input v-model="otp[0]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(0, $event)" @keydown="handleKeyDown(0, $event)" @paste="handlePaste($event)" />
+            @input="handleInput(0, $event)" @keydown="handleKeyDown(0, $event)" @paste="handlePaste($event)" placeholder="0" />
           <input v-model="otp[1]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(1, $event)" @keydown="handleKeyDown(1, $event)" @paste="handlePaste($event)" />
+            @input="handleInput(1, $event)" @keydown="handleKeyDown(1, $event)" @paste="handlePaste($event)" placeholder="0" />
           <input v-model="otp[2]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(2, $event)" @keydown="handleKeyDown(2, $event)" @paste="handlePaste($event)" />
+            @input="handleInput(2, $event)" @keydown="handleKeyDown(2, $event)" @paste="handlePaste($event)" placeholder="0" />
           <input v-model="otp[3]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(3, $event)" @keydown="handleKeyDown(3, $event)" @paste="handlePaste($event)" />
+            @input="handleInput(3, $event)" @keydown="handleKeyDown(3, $event)" @paste="handlePaste($event)" placeholder="0" />
           <input v-model="otp[4]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(4, $event)" @keydown="handleKeyDown(4, $event)" @paste="handlePaste($event)" />
+            @input="handleInput(4, $event)" @keydown="handleKeyDown(4, $event)" @paste="handlePaste($event)" placeholder="0" />
         </div>
         <div>
           <button :disabled="isSubmitDisabled" type="submit" class="button button-primary"

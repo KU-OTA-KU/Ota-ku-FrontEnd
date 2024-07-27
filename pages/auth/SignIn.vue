@@ -25,7 +25,7 @@
         <div>
           <label for="email" class="block text-sm font-medium leading-5 text-white">Эл. почта</label>
           <div class="mt-1">
-            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login" required
+            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login" required placeholder="Введите эл. почту"
               class="input input-primary" />
             <p v-if="errors.email" class="text-red-500 text-xs mt-1">{{ errors.email }}</p>
           </div>
@@ -39,7 +39,7 @@
           </div>
           <div class="mt-1">
             <input id="password" v-model="password" @input="validateForm" type="password"
-              autocomplete="current-password" required class="input input-primary" />
+              autocomplete="current-password" required placeholder="Введите пароль" class="input input-primary" />
             <p v-if="errors.password" class="text-red-500 text-xs mt-1">{{ errors.password }}</p>
           </div>
         </div>
