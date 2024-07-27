@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center h-dvh px-6 py-12 lg:px-8">
     <div class="block lg:hidden pt-4 pr-5 pl-5 absolute top-0 left-0">
-      <NuxtLink to="/auth/signin" class="font-sans font-sm">
+      <NuxtLink to="/auth/forgotpassword" class="font-sans font-sm">
         <svg class="w-10 h-10 p-2 bg-zinc-800 rounded-lg hover:bg-zinc-700" viewBox="0 0 24 24" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, nextTick } from 'vue';
+import { defineComponent, nextTick } from 'vue';
 
 export default defineComponent({
   name: "otpComponent",

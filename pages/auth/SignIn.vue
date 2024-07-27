@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 import { validateEmail, validatePassword } from '~/utils/validation';
 
 export default defineComponent({

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center h-dvh px-6 py-12 lg:px-8">
     <div class="block lg:hidden pt-4 pr-5 pl-5 absolute top-0 left-0">
-      <NuxtLink to="/signIn" class="font-sans font-sm"><svg
+      <NuxtLink to="/auth/signin" class="font-sans font-sm"><svg
           class="w-10 h-10 p-2 bg-zinc-800 rounded-lg hover:bg-zinc-700" viewBox="0 0 24 24" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path d="M5 12H19M5 12L11 6M5 12L11 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
@@ -18,8 +18,8 @@
         <div>
           <label for="password" class="block text-sm font-medium leading-5 text-white">Новый пароль</label>
           <div class="mt-1">
-            <input id="password" v-model="password" @input="validateForm" type="password" autocomplete="current-password" required
-              class="input input-primary" />
+            <input id="password" v-model="password" @input="validateForm" type="password"
+              autocomplete="current-password" required class="input input-primary" />
             <p v-if="errors.password" class="text-red-500 text-xs mt-1">{{ errors.password }}</p>
           </div>
         </div>
@@ -52,8 +52,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-import { validateEmail, validatePassword } from '~/utils/validation';
+import { defineComponent } from 'vue';
+import { validatePassword, validateRepeatPassword } from '~/utils/validation';
 
 export default defineComponent({
   name: "signInComponent",
