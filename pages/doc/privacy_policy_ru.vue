@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-10 pb-10 pl-2 pb-2">
+  <div class="pt-10 pb-10 pl-2 pr-2">
     <h1 class="text-2xl">Политика в отношении обработки персональных данных</h1>
     <br>
     <h2 class="text-xl">1. Общие положения</h2>

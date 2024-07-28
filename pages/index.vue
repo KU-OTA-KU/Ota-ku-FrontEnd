@@ -1,14 +1,27 @@
 <template>
-  <mainHeader :active="0"/>
+  <mainHeader :currentNav="0" :currentNavMobile="0"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useNuxtApp } from '#app';
 
 export default defineComponent({
   name: 'IndexView',
 
   setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      await $statusBar.overlayHide();
+      await $navigationBar.setColor('#09090b');
+    });
+
+    onBeforeUnmount(() => {
+      $statusBar.overlayShow();
+      $navigationBar.setColor('#09090b');
+    });
+
     useHead({
       title: "Твой Личный Портал в Мир Аниме",
       meta: [

@@ -11,8 +11,6 @@ export default defineComponent({
   name: "defaultLayout",
 
   setup() {
-    const { $statusBar, $navigationBar } = useNuxtApp();
-
     useHead({
       meta: [
         { name: 'author', content: 'ota-ku' },
@@ -25,11 +23,6 @@ export default defineComponent({
         { name: 'topic', content: 'ota-ku, аниме смотреть, аниме, лучшие аниме онлайн бесплатно, ота-ку, сайт аниме отаку, лучшие топ аниме смотреть' },
         { name: 'keywords', content: 'Ota-ku - Твой Личный Портал в Мир Аниме, аниме смотреть, аниме, лучшие аниме онлайн бесплатно, ота-ку, сайт аниме отаку, лучшие топ аниме смотреть' },
       ]
-    });
-
-    onBeforeMount( async () => {
-      await $statusBar.setColor('#18181B');
-      await $navigationBar.setColor('#18181B');
     });
 
     onMounted(async () => {
