@@ -146,7 +146,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onBeforeUnmount } from "vue";
+import { defineComponent, onMounted } from "vue";
 import { useNuxtApp } from '#app';
 
 export default defineComponent({
@@ -158,11 +158,6 @@ export default defineComponent({
     onMounted(async () => {
       await $statusBar.overlayHide();
       await $navigationBar.overlayHide();
-    });
-
-    onBeforeUnmount(() => {
-      $statusBar.overlayShow();
-      $navigationBar.overlayShow();
     });
 
     return {};

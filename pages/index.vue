@@ -1,9 +1,12 @@
 <template>
-  <mainHeader :currentNav="0" :currentNavMobile="0"/>
+  <mainHeader :currentNav="0" :currentNavMobile="1"/>
+  <mainSlider/> 
+  <LazyGenresSlider/>
+  <div class="w-full h-dvh"></div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { useNuxtApp } from '#app';
 
 export default defineComponent({
@@ -14,12 +17,8 @@ export default defineComponent({
 
     onMounted(async () => {
       await $statusBar.overlayHide();
-      await $navigationBar.setColor('#09090b');
-    });
-
-    onBeforeUnmount(() => {
-      $statusBar.overlayShow();
-      $navigationBar.setColor('#09090b');
+      await $navigationBar.overlayShow();
+      await $navigationBar.setColor("#09090b")
     });
 
     useHead({

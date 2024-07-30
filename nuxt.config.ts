@@ -4,17 +4,23 @@ export default defineNuxtConfig({
     ssr: true,
     devtools: { enabled: true },
 
-    plugins: ['~/plugins/nprogress.ts', '~/plugins/statusBar.ts', '~/plugins/navigationBar.ts'],
+    plugins: ['~/plugins/nprogress.ts', '~/plugins/statusBar.ts', '~/plugins/navigationBar.ts', '~/plugins/cursor.ts'],
     modules: [
       "nuxt-gtag",
       "@nuxtjs/ionic",
       '@nuxtjs/tailwindcss',
       '@nuxtjs/robots',
       '@nuxt/image',
+      'nuxt-swiper',
     ],
 
     gtag: {
         id: 'G-XKSYJXXKPB'
+    },
+
+    routeRules: {
+      '/': { prerender: true},
+      '/welcome': { prerender: true}, 
     },
 
     vuetify: {
@@ -34,6 +40,7 @@ export default defineNuxtConfig({
         '~/assets/root.scss',
         `~/assets/variables.css`,
         '~/assets/nprogress.css',
+        '~/assets/cursor.css',
     ],
 
     build: {

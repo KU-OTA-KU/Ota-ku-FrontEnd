@@ -35,8 +35,8 @@
             <label for="password-repeat" class="block text-sm font-medium leading-5 text-white">Повторите пароль</label>
           </div>
           <div class="mt-1">
-            <input id="password-repeat" v-model="repeatPassword" @input="validateForm" type="password" placeholder="Повторите пароль"
-              autocomplete="current-password" required class="input input-primary" />
+            <input id="password-repeat" v-model="repeatPassword" @input="validateForm" type="password"
+              placeholder="Повторите пароль" autocomplete="current-password" required class="input input-primary" />
             <p v-if="errors.repeatPassword" class="text-red-500 text-xs mt-1">{{ errors.repeatPassword }}</p>
           </div>
         </div>
@@ -59,11 +59,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { validatePassword, validateRepeatPassword } from '~/utils/validation';
+import { useNuxtApp } from '#app';
 
 export default defineComponent({
   name: "signInComponent",
+
+  setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      $navigationBar.overlayShow();
+      $statusBar.overlayShow();
+      $navigationBar.setColor('#18181B');
+      $statusBar.setColor('#18181B');
+    });
+  },
 
   data() {
     return {

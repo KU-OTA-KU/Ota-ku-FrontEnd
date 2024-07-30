@@ -20,8 +20,8 @@
         <div>
           <label for="email" class="block text-sm font-medium leading-5 text-white">Эл. почта</label>
           <div class="mt-1">
-            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login" required placeholder="Введите эл. почту"
-              class="input input-primary" />
+            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login" required
+              placeholder="Введите эл. почту" class="input input-primary" />
             <p v-if="errors.email" class="text-red-500 text-xs mt-1">{{ errors.email }}</p>
           </div>
         </div>
@@ -43,11 +43,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { validateEmail } from '~/utils/validation';
-
+import { useNuxtApp } from '#app';
 export default defineComponent({
   name: "forgotPasswordComponent",
+
+  setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      $navigationBar.overlayShow();
+      $statusBar.overlayShow();
+      $navigationBar.setColor('#18181B');
+      $statusBar.setColor('#18181B');
+    });
+  },
 
   data() {
     return {

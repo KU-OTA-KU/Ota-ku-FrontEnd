@@ -12,22 +12,27 @@
     <div class="pointer-events-none select-none">
       <NuxtImg class="mx-auto w-52 pointer-events-none select-none" preload format="webp"
         src="/otaKu/ota-ku-kashima.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
-      <h2 class="mt-3 text-center text-lg font-semibold font-sans leading-5">Лаг Сиинг уже в пути! 
+      <h2 class="mt-3 text-center text-lg font-semibold font-sans leading-5">Лаг Сиинг уже в пути!
       </h2>
     </div>
     <div class="mt-7 sm:mx-auto sm:w-full sm:max-w-md flex flex-col">
       <form @submit.prevent="submitForm" ref="otpForm" class="space-y-5">
         <div class="flex items-center justify-center gap-3">
           <input v-model="otp[0]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(0, $event)" @keydown="handleKeyDown(0, $event)" @paste="handlePaste($event)" placeholder="0" />
+            @input="handleInput(0, $event)" @keydown="handleKeyDown(0, $event)" @paste="handlePaste($event)"
+            placeholder="0" />
           <input v-model="otp[1]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(1, $event)" @keydown="handleKeyDown(1, $event)" @paste="handlePaste($event)" placeholder="0" />
+            @input="handleInput(1, $event)" @keydown="handleKeyDown(1, $event)" @paste="handlePaste($event)"
+            placeholder="0" />
           <input v-model="otp[2]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(2, $event)" @keydown="handleKeyDown(2, $event)" @paste="handlePaste($event)" placeholder="0" />
+            @input="handleInput(2, $event)" @keydown="handleKeyDown(2, $event)" @paste="handlePaste($event)"
+            placeholder="0" />
           <input v-model="otp[3]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(3, $event)" @keydown="handleKeyDown(3, $event)" @paste="handlePaste($event)" placeholder="0" />
+            @input="handleInput(3, $event)" @keydown="handleKeyDown(3, $event)" @paste="handlePaste($event)"
+            placeholder="0" />
           <input v-model="otp[4]" type="text" class="input input-primary input-otp-cube" maxlength="1" pattern="\d*"
-            @input="handleInput(4, $event)" @keydown="handleKeyDown(4, $event)" @paste="handlePaste($event)" placeholder="0" />
+            @input="handleInput(4, $event)" @keydown="handleKeyDown(4, $event)" @paste="handlePaste($event)"
+            placeholder="0" />
         </div>
         <div>
           <button :disabled="isSubmitDisabled" type="submit" class="button button-primary"
@@ -47,8 +52,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, nextTick } from 'vue';
-
+import { defineComponent, nextTick, onMounted } from 'vue';
+import { useNuxtApp } from '#app';
 export default defineComponent({
   name: "otpComponent",
   data() {
@@ -56,6 +61,18 @@ export default defineComponent({
       otp: ['', '', '', '', ''],
     };
   },
+
+  setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      $navigationBar.overlayShow();
+      $statusBar.overlayShow();
+      $navigationBar.setColor('#18181B');
+      $statusBar.setColor('#18181B');
+    });
+  },
+
   computed: {
     isSubmitDisabled() {
       return this.otp.some(num => num === '');

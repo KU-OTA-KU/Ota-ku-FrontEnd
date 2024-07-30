@@ -1,7 +1,7 @@
 <template>
-  <header class="w-full hidden top-0 p-2  bg-zinc-950 fixed md:block shadow-xl" id="header">
+  <header class="w-full hidden top-0 p-2 z-50 bg-zinc-950 fixed md:block transition-all duration-300" :class="header" id="header">
     <div class="container mx-auto max-w-7xl pt-2 pb-2 flex justify-between items-center">
-      <div class="flex items-center gap-4">
+      <div class="hidden items-center gap-4 lg:flex">
         <NuxtLink class="cursor-pointer" to="/">
           <NuxtImg class="mx-auto w-36 pointer-events-none select-none" preload format="webp"
             src="/otaKu/ota-ku-kashima.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
@@ -19,12 +19,12 @@
               d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
           </svg>Каталог
         </NuxtLink>
-        <NuxtLink id="3" to="/today" class="text-nowrap font-sans button button-secondary flex gap-2 items-center"><svg
+        <NuxtLink id="3" to="/today" class="button button-secondary"><svg
             class="w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
               d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
           </svg>Расписание</NuxtLink>
-        <NuxtLink id="4" to="/today" class="text-nowrap font-sans button button-secondary flex gap-2 items-center">
+        <NuxtLink id="4" to="/welcome" class="text-nowrap font-sans button button-secondary flex gap-2 items-center">
           <svg class="w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
             <path
               d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-114.3 0c11.6 36 3.1 77-25.4 105.5L320 413.8l0 34.2zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
@@ -47,7 +47,7 @@
       </div>
     </div>
   </header>
-  <header class="fixed  bottom-0 left-0 w-full md:hidden bg-zinc-950 shadow-sm" id="mobile-header">
+  <header class="fixed z-50 bottom-0 left-0 w-full md:hidden bg-zinc-950 shadow-xl" id="mobile-header">
     <div class="flex justify-between items-center">
       <NuxtLink to="/" id="1" class="navbutton-primary">
         <svg class="w-5 h-5 fill-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -64,8 +64,7 @@
         <p class="text-xs pt-1">Обзор</p>
       </NuxtLink>
       <NuxtLink class="navbutton-primary" id="3">
-        <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 384 512">
+        <svg class="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
           <path
             d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
         </svg>
@@ -99,14 +98,27 @@ export default defineComponent({
   },
 
   setup(props) {
+    const header = ref('header-default');
     const { currentNav, currentNavMobile } = toRefs(props);
     const profile = false;
+
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        header.value = 'header-scrolled';
+      } else {
+        header.value = 'header-default';
+      }
+    };
 
     const activeHeaderNavigationLinks = (query: number, queryMobile: number) => {
       const currentNavItem = document.querySelector(`#header #nav a[id="${query}"]`);
       const currentNavItemMobile = document.querySelector(`#mobile-header a[id="${queryMobile}"]`);
-      if (currentNavItem && currentNavItemMobile) {
+
+      if (currentNavItem) {
         currentNavItem.classList.add('active');
+      }
+
+      if (currentNavItemMobile) {
         currentNavItemMobile.classList.add('active');
       }
     };
@@ -114,21 +126,29 @@ export default defineComponent({
     const removeHeaderNavigationLinks = (query: number, queryMobile: number) => {
       const currentNavItem = document.querySelector(`#header nav a[id="${query}"]`);
       const currentNavItemMobile = document.querySelector(`#header-mobile a[id="${queryMobile}"]`);
-      if (currentNavItem && currentNavItemMobile) {
+
+      if (currentNavItem) {
         currentNavItem.classList.remove('active');
+      }
+
+      if(currentNavItemMobile) {
         currentNavItemMobile.classList.remove('active');
       }
     };
 
     onMounted(() => {
       activeHeaderNavigationLinks(currentNav.value, currentNavMobile.value);
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
     });
 
     onBeforeUnmount(() => {
       removeHeaderNavigationLinks(currentNav.value, currentNavMobile.value);
+      window.removeEventListener('scroll', handleScroll);
     });
 
     return {
+      header,
       profile,
       activeHeaderNavigationLinks,
       removeHeaderNavigationLinks,

@@ -27,6 +27,7 @@
     "nprogress": "^0.2.0",
     "nuxt": "^3.12.4",
     "nuxt-gtag": "^2.0.7",
+    "nuxt-swiper": "^1.2.2",
     "vee-validate": "^4.13.2",
     "vue": "latest",
     "yup": "^1.4.0"

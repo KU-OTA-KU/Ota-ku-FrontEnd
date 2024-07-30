@@ -1,9 +1,9 @@
 <template>
-    <NuxtLayout />
+  <NuxtLayout />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import {App as CapacitorApp} from '@capacitor/app';
+import { App as CapacitorApp } from '@capacitor/app';
 
 export default defineComponent({
   name: "appGlobalComponent",
@@ -22,3 +22,18 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+/* Анимация для входа страницы */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+/* Начальное состояние для входа страницы */
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

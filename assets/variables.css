@@ -3,19 +3,23 @@
 
 /* button */
 .button {
-  @apply w-full text-sm font-sans text-center cursor-pointer rounded-md px-3 py-1.5 font-semibold leading-6 text-white shadow-sm;
+  @apply w-full font-sans text-center cursor-pointer rounded-md font-semibold shadow-sm flex justify-center items-center gap-2 text-nowrap;
 }
 
 .button-primary {
-  @apply bg-blue-500 hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-700;
+  @apply bg-blue-500 text-sm hover:bg-blue-600 focus-visible:outline px-3 py-1.5 focus-visible:outline-2 text-white focus-visible:outline-blue-700;
 }
 
 .button-secondary {
-  @apply bg-opacity-5 text-sm bg-white shadow-none hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-700
+  @apply bg-opacity-10 text-sm bg-white shadow-none hover:bg-blue-500 px-6 py-1.5 focus-visible:outline text-white focus-visible:outline-2 focus-visible:outline-blue-700
 }
 
 .button-secondary.active {
   @apply bg-blue-500
+}
+
+.button-third {
+  @apply text-zinc-900 text-sm font-semibold fill-zinc-900 gap-2 bg-white px-6 py-1.5 hover:bg-blue-500 hover:text-white hover:fill-white
 }
 
 .navbutton-primary {
@@ -54,4 +58,26 @@
 
 .input-otp-cube {
   @apply w-14 h-14 text-center
+}
+
+
+
+/* h2 */
+.h2 {
+  @apply text-3xl md:text-5xl lg:text-6xl text-white font-sans font-semibold
+}
+
+.h3 {
+  @apply text-xl md:text-2xl lg:text-3xl text-white font-sans font-semibold
+}
+
+
+
+/* header properties */
+.header-default {
+  @apply bg-opacity-10
+}
+
+.header-scrolled {
+  @apply bg-opacity-100 shadow-lg
 }

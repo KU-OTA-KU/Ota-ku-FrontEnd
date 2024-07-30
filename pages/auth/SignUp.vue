@@ -25,16 +25,16 @@
         <div>
           <label for="email" class="block text-sm font-medium leading-5 text-white">Эл. почта</label>
           <div class="mt-1">
-            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login" placeholder="Введите эл. почту" required
-              class="input input-primary" />
+            <input id="email" v-model="email" @input="validateForm" type="text" autocomplete="current-login"
+              placeholder="Введите эл. почту" required class="input input-primary" />
             <p v-if="errors.email" class="text-red-500 text-xs mt-1">{{ errors.email }}</p>
           </div>
         </div>
         <div>
           <label for="login" class="block text-sm font-medium leading-5">Логин</label>
           <div class="mt-1">
-            <input id="login" v-model="login" @input="validateForm" type="text" autocomplete="current-login" placeholder="Введите логин" required
-              class="input input-primary" />
+            <input id="login" v-model="login" @input="validateForm" type="text" autocomplete="current-login"
+              placeholder="Введите логин" required class="input input-primary" />
             <p v-if="errors.login" class="text-red-500 text-xs mt-1">{{ errors.login }}</p>
           </div>
         </div>
@@ -46,7 +46,7 @@
               </div>
               <div class="mt-1">
                 <input id="password" v-model="password" @input="validateForm" type="password"
-                  autocomplete="current-password" required class="input input-primary" placeholder="Введите пароль"/>
+                  autocomplete="current-password" required class="input input-primary" placeholder="Введите пароль" />
                 <p v-if="errors.password" class="text-red-500 text-xs mt-1">{{ errors.password }}</p>
               </div>
             </div>
@@ -56,7 +56,7 @@
               </div>
               <div class="mt-1">
                 <input id="password-repeat" v-model="repeatPassword" @input="validateForm" type="password"
-                  autocomplete="current-password" required class="input input-primary" placeholder="Повторите пароль"/>
+                  autocomplete="current-password" required class="input input-primary" placeholder="Повторите пароль" />
                 <p v-if="errors.repeatPassword" class="text-red-500 text-xs mt-1">{{ errors.repeatPassword }}</p>
               </div>
             </div>
@@ -82,11 +82,23 @@
 
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { validateEmail, validateLogin, validatePassword, validateRepeatPassword } from '~/utils/validation';
+import { useNuxtApp } from '#app';
 
 export default defineComponent({
   name: "signUpComponent",
+
+  setup() {
+    const { $statusBar, $navigationBar } = useNuxtApp();
+
+    onMounted(async () => {
+      $navigationBar.overlayShow();
+      $statusBar.overlayShow();
+      $navigationBar.setColor('#18181B');
+      $statusBar.setColor('#18181B');
+    });
+  },
 
   data() {
     return {
