@@ -10,10 +10,10 @@
       <div class="w-full h-full relative">
         <div class="w-full h-full bg-custom-gradient-t md:bg-custom-gradient-r z-10 absolute"></div>
         <NuxtImg :src="res.image" class="absolute right-0 h-full w-dvw"
-          style="object-fit: cover; object-position: center;" :quality="100" loading="lazy"></NuxtImg>
-        <div class="relative w-full h-full">
+          style="object-fit: cover; object-position: center;" loading="lazy" format="webp"></NuxtImg>
+        <div class="relative w-full h-full p-2">
           <div
-            class="w-full lg:w-5/6 xl:w-3/5 mx-auto max-w-8xl container flex flex-col items-start pr-2 pl-2 xl:pl-16 xl:pr-16 pb-5 md:pb-0 justify-end md:justify-center z-10 absolute left-0 h-full">
+            class="relative w-full max-w-8xl mx-auto container flex flex-col items-start justify-end md:justify-center z-10 h-full">
             <h2 class="h2 mb-1 md:mb-3">{{ res.titleRU }}</h2>
             <h2 class="h3 opacity-65">{{ res.titleEN }}</h2>
             <div class="flex opacity-65 mt-1 mb-1 text-sm md:text-base md:mt-3 md:mb-3">
@@ -21,7 +21,7 @@
                   v-if="index < res.genres.length - 1" class="mr-3 ml-3">•</span>
               </p>
             </div>
-            <p class="text-sm md:text-base font-normal  opacity-80 md:font-semibold line-clamp-6">{{ res.description }}
+            <p class="lg:max-w-3xl text-sm md:text-base font-normal  opacity-80 md:font-semibold line-clamp-6">{{ res.description }}
             </p>
             <div class="mt-4 mb-1 flex-col gap-2 md:mt-3 md:mb-3 flex md:flex-row w-full md:w-auto">
               <NuxtLink class="button button-third">

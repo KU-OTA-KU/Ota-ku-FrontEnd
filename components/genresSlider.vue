@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full bg-zinc-900 px-0 py-2 lg:px-16">
-    <div class="w-full">
+  <section class="w-full bg-zinc-900 p-2">
+    <div class="w-full container max-w-8xl mx-auto">
       <Swiper :modules="[]" 
       :loop="false"
       :effect="'creative'"

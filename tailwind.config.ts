@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '110rem',
       },
       backgroundImage: {
         'custom-gradient-r': 'linear-gradient(90deg, rgba(9,9,11,1) 40%, rgba(9,9,11,0.6) 80%, rgba(0,0,0,0) 100%)',

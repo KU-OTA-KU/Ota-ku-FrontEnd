@@ -4,7 +4,7 @@
       <div class="hidden items-center gap-4 lg:flex">
         <NuxtLink class="cursor-pointer" to="/">
           <NuxtImg class="mx-auto w-36 pointer-events-none select-none" preload format="webp"
-            src="/otaKu/ota-ku-kashima.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
+            src="/otaKu/logo.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
         </NuxtLink>
       </div>
       <nav class="flex gap-3" id="nav">
