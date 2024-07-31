@@ -1,7 +1,9 @@
 <template>
   <mainHeader :currentNav="0" :currentNavMobile="1"/>
-  <mainSlider/> 
+  <mainSlider/>
+  <LazyUpdateList/>
   <LazyGenresSlider/>
+  <LazyMainSeries title="В тренде" subtitle="аниме, которое захватывает мир! 😉" apiFetchPath="trend" />
   <div class="w-full h-dvh"></div>
 </template>
 

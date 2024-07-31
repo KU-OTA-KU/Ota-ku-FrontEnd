@@ -1,6 +1,6 @@
 <template>
   <header class="w-full hidden top-0 p-2 z-50 bg-zinc-950 fixed md:block transition-all duration-300" :class="header" id="header">
-    <div class="container mx-auto max-w-7xl pt-2 pb-2 flex justify-between items-center">
+    <div class="container mx-auto max-w-8xl pt-2 pb-2 flex justify-between items-center">
       <div class="hidden items-center gap-4 lg:flex">
         <NuxtLink class="cursor-pointer" to="/">
           <NuxtImg class="mx-auto w-36 pointer-events-none select-none" preload format="webp"

@@ -270,10 +270,10 @@ export default defineComponent({
   overflow: hidden;
   -webkit-mask: linear-gradient(90deg,
       transparent,
-      white 30%,
-      white 70%,
+      rgb(0, 0, 0) 30%,
+      rgb(0, 0, 0) 70%,
       transparent);
-  mask: linear-gradient(90deg, transparent, white 30%, white 70%, transparent);
+  mask: linear-gradient(90deg, transparent, rgb(0, 0, 0) 60%, rgb(0, 0, 0) 100%, transparent);
 }
 
 .scroller[data-animated='true'] .scroller__inner {

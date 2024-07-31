@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full bg-zinc-900 pt-2 pr-2 pl-2">
+  <section class="w-full bg-zinc-900 px-0 py-2 lg:px-16">
     <div class="w-full">
       <Swiper :modules="[]" 
       :loop="false"
