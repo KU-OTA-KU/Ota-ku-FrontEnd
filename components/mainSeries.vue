@@ -1,7 +1,7 @@
 <template>
-  <section class="w-full bg-zinc-900 p-2">
+  <section class="w-full bg-zinc-900 px-1 py-1 lg:py-4">
     <div class="max-w-8xl mx-auto container">
-      <div class="w-full p-2">
+      <div class="w-full pb-2">
         <h2 class="h3">{{ title }}<span class="opacity-80 text-sm md:text-base lg:text-lg ml-2">/ {{ subtitle }}</span>
         </h2>
       </div>
@@ -12,33 +12,43 @@
             spaceBetween: 10
           },
           640: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 10
           },
           768: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 10
           },
           1024: {
-            slidesPerView: 6,
-            spaceBetween: 10
+            slidesPerView: 5,
+            spaceBetween: 20
           },
           1280: {
-            slidesPerView: 7,
-            spaceBetween: 10
+            slidesPerView: 6,
+            spaceBetween: 20
           },
           1440: {
-            slidesPerView: 8,
-            spaceBetween: 10
+            slidesPerView: 6,
+            spaceBetween: 30
           }
         }">
-          <SwiperSlide v-if="data" v-for="res in data" :key="res.id">
-            <div class="w-full  bg-zinc-800 relative rounded-md overflow-hidden">
+          <SwiperSlide v-if="data" v-for="res in data" :key="res.id" class="series-container">
+            <div class="w-full  bg-zinc-800 relative rounded-md overflow-hidden cursor-pointer aspect-1/3">
               <NuxtImg format="webp" :src="res.image" class="w-full h-full object-cover" loading="lazy" />
-              <div class="w-full h-full flex flex-col justify-end p-4 bg-custom-series-gradient-t absolute bottom-0">
-                <h2 class="h3 mb-1 line-clamp-1">{{ res.titleRU }}<span
-                    class="opacity-80 text-sm md:text-base lg:text-lg ml-2">/ {{ res.titleEN }}</span></h2>
-                <p class="line-clamp-2 opacity-80 text-sm md:text-base">{{ res.descriptionRU }}</p>
+              <div class="w-full h-full flex flex-col justify-end p-4 bg-custom-series-gradient-t absolute bottom-0 transition-opacity title">
+                <h4 class="h4 mb-1 line-clamp-2">{{ res.titleRU }}</h4>
+                <span class="flex line-clamp-2 opacity-80 text-xs">{{ res.airedOnYear.year }} <span class="mx-1 hidden md:block">•</span><p class="hidden md:block">{{ res.genres[0].titleRU }}</p><span class="mx-1">•</span><p>{{ res.kind.kindRU}}</p></span>
+              </div>
+              <div class="absolute top-0 p-2 flex gap-2 transition-opacity status-bar">
+                <div class="bg-red-500 py-0.5 text-xs md:text-sm px-3 rounded-md font-semibold">
+                  <p>{{ res.resolution}}</p>
+                </div>
+                <div class="bg-green-500 py-0.5 text-xs md:text-sm px-3 rounded-md font-semibold">
+                  <p>{{ res.score}}</p>
+                </div>
+              </div>
+              <div class="absolute top-0 w-full bg-black h-full px-2 pt-2 bg-opacity-70 opacity-0 transition-opacity description">
+                <p class="line-clamp-6 text-xs opacity-60 ">{{ res.descriptionRU }}</p>
               </div>
             </div>
           </SwiperSlide>
@@ -75,7 +85,7 @@ export default defineComponent({
     const fetchData = async () => {
       try {
         const response = await axios.get(`/api/anime/${props.apiFetchPath}.json`);
-        data.value = response.data.sort(() => Math.random() - 0.5);
+        data.value = response.data;
       } catch (error) {
         console.error(error);
       }
@@ -91,4 +101,20 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.series-container {
+   &:hover {
+      .description {
+        opacity: 1;
+      }
+
+      .status-bar {
+        opacity: 0;
+      }
+
+      .title {
+        opacity: 0;
+      }
+   }
+}
+</style>

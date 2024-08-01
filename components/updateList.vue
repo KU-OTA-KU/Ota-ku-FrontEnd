@@ -1,5 +1,5 @@
 <template>
-  <section class="px-2 py-4 bg-zinc-950 flex flex-col md:flex-row justify-between">
+  <section class="px-1 py-4 bg-zinc-950 flex flex-col md:flex-row justify-between">
     <div class="w-full container max-w-8xl mx-auto">
       <h1 class="h2 text-4xl font-bold mb-1">
         <span class="text-blue-500">OTA</span>-KU

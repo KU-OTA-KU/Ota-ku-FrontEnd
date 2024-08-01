@@ -64,11 +64,15 @@
 
 /* h2 */
 .h2 {
-  @apply text-3xl md:text-5xl lg:text-6xl text-white font-sans font-semibold
+  @apply text-3xl md:text-5xl lg:text-6xl font-sans font-semibold
 }
 
 .h3 {
-  @apply text-xl md:text-2xl lg:text-3xl text-white font-sans font-semibold
+  @apply text-xl md:text-2xl lg:text-3xl font-sans font-semibold
+}
+
+.h4 {
+  @apply text-xs md:font-semibold md:text-base
 }
 
 

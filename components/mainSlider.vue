@@ -6,12 +6,12 @@
     }" :fade-effect="{
       crossFade: true,
     }">
-    <SwiperSlide v-if="data" v-for="res in data" :key="res.id">
+    <SwiperSlide v-for="res in data" :key="res.id">
       <div class="w-full h-full relative">
         <div class="w-full h-full bg-custom-gradient-t md:bg-custom-gradient-r z-10 absolute"></div>
         <NuxtImg :src="res.image" class="absolute right-0 h-full w-dvw"
           style="object-fit: cover; object-position: center;" loading="lazy" format="webp"></NuxtImg>
-        <div class="relative w-full h-full p-2">
+        <div class="relative w-full h-full p-1">
           <div
             class="relative w-full max-w-8xl mx-auto container flex flex-col items-start justify-end md:justify-center z-10 h-full">
             <h2 class="h2 mb-1 md:mb-3">{{ res.titleRU }}</h2>
@@ -40,9 +40,6 @@
           </div>
         </div>
       </div>
-    </SwiperSlide>
-    <SwiperSlide v-else>
-      <div class="mt-24 text-white">Loading...</div>
     </SwiperSlide>
   </Swiper>
 </template>
