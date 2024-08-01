@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '100rem',
       },
       aspectRatio: {
         '1/3': '1/1.4',
