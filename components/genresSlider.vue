@@ -32,7 +32,7 @@
         }
       }"
       >
-        <SwiperSlide v-if="data" v-for="res in data" :key="res.id">
+        <SwiperSlide v-for="res in data" :key="res.id">
           <div class="w-full aspect-square bg-zinc-950 relative rounded-md overflow-hidden"> 
             <NuxtImg format="webp" :src="res.image" class="w-full h-full" loading="lazy"/>
             <div class="w-full h-full flex flex-col justify-end p-4 bg-custom-genre-gradient-t absolute bottom-0">
