@@ -69,9 +69,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Install @nuxt/image
-        run: npx nuxi@latest module add @nuxt/image
+        run: npm run install
       - name: Static HTML export with Nuxt
         run: npm run generate
       - name: Upload artifact
