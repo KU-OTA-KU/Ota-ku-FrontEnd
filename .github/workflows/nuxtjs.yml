@@ -51,7 +51,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Install @nuxt/image
-        run: npm install @nuxt/image
+        run: npx nuxi@latest module add @nuxt/image
       - name: Static HTML export with Nuxt
         run: npm run generate
       - name: Upload artifact
