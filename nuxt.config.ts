@@ -3,7 +3,11 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     ssr: true,
     devtools: { enabled: true },
-
+    target: 'static',
+    router: {
+      base: '/Ota-ku-frontend/'
+    },
+  
     plugins: ['~/plugins/nprogress.ts', '~/plugins/statusBar.ts', '~/plugins/navigationBar.ts', '~/plugins/cursor.ts'],
     modules: [
       "nuxt-gtag",
