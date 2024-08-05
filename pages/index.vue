@@ -4,6 +4,7 @@
   <LazyUpdateList/>
   <LazyGenresSlider/>
   <LazyFeedPanel/>
+  <LazyFooterComponent/>
   <!-- <LazyMainSeries title="Топ аниме" subtitle="Погружайся в лучшие аниме! 🏆" apiFetchPath="testMainSeries" />
   <LazyMainSeries title="В тренде" subtitle="аниме, которое захватывает мир! 😉" apiFetchPath="testMainSeries" />
   <LazyMainSeries title="Онгоинги" subtitle="следи за сюжетом! 🌟👆" apiFetchPath="testMainSeries" />

@@ -17,7 +17,7 @@
     </div>
     <div class="pointer-events-none select-none">
       <NuxtImg class="mx-auto w-52 pointer-events-none select-none" preload format="webp"
-        src="/otaKu/ota-ku-kashima.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
+        src="/otaKu/logo.png" alt="Ota-ku Смотреть аниме в нашем платформе" />
       <h2 class="mt-3 text-center text-lg font-semibold font-sans leading-5">Еще не с нами? Сэмпай?! Присоединяйся</h2>
     </div>
     <div class="mt-7 sm:mx-auto sm:w-full sm:max-w-md flex flex-col">

@@ -1,134 +1,134 @@
 <template>
-  <div class="w-full h-dvh overflow-hidden">
-    <div class="scroller overflow-hidden rotate-12 fixed" data-direction="left" data-speed="slow" data-animated='true'>
+  <div class="w-full h-dvh overflow-hidden bg-zinc-950">
+    <div class="scroller overflow-hidden rotate-12 fixed pointer-events-none select-none" data-direction="left" data-speed="slow" data-animated='true'>
       <div class="scroller__inner flex flex-col overflow-hidden">
         <div class="scroller-container flex flex-row w-full">
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
           <!--  -->
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
         </div>
         <div class="scroller-container flex flex-row w-full">
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
           <!--  -->
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
         </div>
         <div class="scroller-container flex flex-row w-full">
-          <NuxtImg format="webp" src="/welcomePosters/poster16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster10.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-10.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
           <!--  -->
-          <NuxtImg format="webp" src="/welcomePosters/poster16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster10.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-16.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-10.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-14.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-12.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
         </div>
         <div class="scroller-container flex flex-row w-full">
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster8.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster13.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-8.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-13.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
           <!--  -->
-          <NuxtImg format="webp" src="/welcomePosters/poster9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster8.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster13.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-9.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-20.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-8.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-7.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-13.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-11.webp" loading="lazy" class="welcome-image bg-zinc-800" />
         </div>
         <div class="scroller-container flex flex-row w-full">
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
           <!--  -->
-          <NuxtImg format="webp" src="/welcomePosters/poster6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
-          <NuxtImg format="webp" src="/welcomePosters/poster4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-6.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-15.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-1.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-19.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-2.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-18.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-5.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-17.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-3.webp" loading="lazy" class="welcome-image bg-zinc-800" />
+          <NuxtImg format="webp" src="/welcomePosters/poster-4.webp" loading="lazy" class="welcome-image bg-zinc-800" />
         </div>
       </div>
     </div>
   </div>
-  <div class="absolute top-0 pt-12 pl-3">
+  <div class="absolute top-0 pt-12 pl-3 pointer-events-none select-none">
     <p class="text-sm text-gray-300">©2022 - 2024 OTA-KU Все права защищены.</p>
     <p class="text-sm text-gray-200">для людей старше 16 лет</p>
   </div>
   <div class="absolute bottom-0 w-full">
     <div class="w-full flex flex-col justify-center items-center">
-      <NuxtImg preload format="webp" src="/otaKu/ota-ku-kashima.png" class="w-1/2 md:w-56 lg:w-60 xl:w-72"
+      <NuxtImg preload format="webp" src="/otaKu/logo.png" class="w-1/2 md:w-56 lg:w-60 xl:w-72 pointer-events-none select-none"
         alt="Ota-ku Смотреть аниме в нашем платформе" />
-      <div class="mt-1 mb-4 text-center">
+      <div class="mt-1 mb-4 text-center pointer-events-none select-none">
         <h1 class="text-4xl  md:text-5xl font-sans font-bold leading-none">Добро пожаловать</h1>
         <h2 class="text-xl lg:text-xl mt-2 leading-none">Здесь начинаются ваши<br> незабываемые приключения.</h2>
       </div>
@@ -138,7 +138,7 @@
         <NuxtLink class="link link-primary" to="/auth/signup">Создать акканут</NuxtLink>
       </div>
       <div class="p-1 pb-12">
-        <p class="text-sm text-center text-gray-300">Весь материал на сайте представлен исключительно для домашнего
+        <p class="text-sm text-center text-gray-300 pointer-events-none select-none">Весь материал на сайте представлен исключительно для домашнего
           ознакомительного просмотра</p>
       </div>
     </div>
