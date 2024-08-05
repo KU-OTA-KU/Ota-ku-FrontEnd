@@ -1,1 +1,0 @@
-{"id":"186b1e8a-924d-4e69-98cd-9a11aa123eb9","timestamp":1722838713151,"matcher":{"static":{"/":{"prerender":true},"/welcome":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/auth/changePassword","/doc/authors_ru","/auth/otp","/auth/ForgotPassword","/auth/SignUp","/doc/privacy_policy_ru","/doc/terms_ru","/auth/SignIn"]}

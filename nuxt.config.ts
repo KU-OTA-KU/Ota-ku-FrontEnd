@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     target: 'static',
     app: {
-      baseURL: '/Ota-ku-frontend/'
+      // baseURL: '/Ota-ku-frontend/'
     },
   
     plugins: ['~/plugins/nprogress.ts', '~/plugins/statusBar.ts', '~/plugins/navigationBar.ts', '~/plugins/cursor.ts'],
